@@ -2,6 +2,18 @@
 
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 
+## 🗂️ 0. 폴더 구조
+
+```
+천현우
+  |---week1
+  |---week2
+Hyyena
+  |---week1
+  |---week2
+  
+```
+
 ## 📢 1. 스터디 규칙
 
 ### 📌 일주일마다 풀어야 할 문제 할당 📌
