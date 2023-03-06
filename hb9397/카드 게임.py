@@ -3,7 +3,7 @@ def solution1(N):
     answer = 0
     temp = [i for i in range(N, 0, -1)]
 
-    while len(temp) != 2:
+    while len(temp) != 1:
         temp.pop()
         temp.insert(0, temp.pop())
 
