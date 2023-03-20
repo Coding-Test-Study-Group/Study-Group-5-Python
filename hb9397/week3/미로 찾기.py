@@ -1,3 +1,34 @@
+# https://www.acmicpc.net/problem/2178
+from collections import deque
+
+N, M = map(int, input().split())
+
+miro = [list(map(int, input())) for _ in range(N)]
+
+go = [(1, 0), (0, 1), (-1, 0), (0, -1)]
+
+def bfs(y, x):
+    temp = deque()
+    temp.append((y, x))
+
+    while temp:
+        cY, cX = temp.popleft()
+        for goY, goX in go:
+            Y, X = cY + goY, cX + goX
+
+            if Y == 0 and X == 0:
+                continue
+
+            if (0 <= Y < N) and (0 <= X < M) and miro[Y][X] == 1:
+                temp.append((Y, X))
+                miro[Y][X] += miro[cY][cX]
+
+# 풀이 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# 미로의 최초 좌표값(미로 탐색 시작값)
+bfs(0, 0)
+print(miro[N-1][M-1])
+
 from collections import deque
 # N은 도달 해야하는 좌표의 y값, M은 도달 해야하는 좌표의 X값
 # 한 줄에 입력된 N M을 , 로 분리해서 N, M에 할당 
